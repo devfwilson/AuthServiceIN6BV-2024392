@@ -7,7 +7,7 @@ public interface IRoleRepository
 {
     Task<Role?> GetByNameAsync(string name);
     Task<int> CountUsersInRoleAsync(string roleName);
-    Task<IReadOnlyList<User>> GetUserByRoleAsync(string roleName); 
+    Task<IReadOnlyList<User>> GetUsersByRoleAsync(string roleName); 
     Task<IReadOnlyList<string>> GetUserRoleNameAsync(string userId);
 }
 

@@ -3,7 +3,7 @@ using System.Text;
 
 namespace AuthServiceIN6BV.Application.Services;
 
-public class UuIdGenerator
+public class UuidGenerator
 {
     private static readonly string Alphabet = "123456789ABCDEFGHJKMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz";
 
@@ -25,6 +25,11 @@ public class UuIdGenerator
     public static string GenerateUserId()
     {
         return $"usr_{GenerateShortUUID()}";
+    }
+
+    public static string GenerateRoleId()
+    {
+        return $"rol_{GenerateShortUUID()}";
     }
 
     public static bool IsValidUserId(string? id)
