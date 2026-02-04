@@ -63,7 +63,7 @@ public class UserManagementService(IUserRepository users, IRoleRepository roles,
 
     public async Task<IReadOnlyList<string>> GetUserRolesAsync(string userId)
     {
-        var roleNames = await roles.GetUserRoleNamesAsync(userId);
+        var roleNames = await roles.GetUsersRoleNamesAsync(userId);
         return roleNames;
     }
 

@@ -28,7 +28,7 @@ public class FormFileAdapter : IFileData
         }
     }
 
-    public string Content => _formFile.ContentType;
+    public string ContentType => _formFile.ContentType;
     public string FileName => _formFile.FileName;
     public long Size => _formFile.Length;
 }
